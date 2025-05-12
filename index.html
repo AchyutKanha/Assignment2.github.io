@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Functions Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>JavaScript Functions Showcase</h1>
+
+    <!-- 1. Password Toggle -->
+    <section>
+      <h2>1. Password Toggle</h2>
+      <label for="passwords">Password:</label>
+      <input type="password" id="passwords" value="secret123">
+      <button onclick="togglePassword(event)">Show Password</button>
+      <div class="output">Click the button to show/hide the password.</div>
+    </section>
+
+    <!-- 2. Alert Function -->
+    <section>
+      <h2>2. Alert Function</h2>
+      <button onclick="showAlert()">Show Alert</button>
+      <div class="output">Click to trigger a JavaScript alert.</div>
+    </section>
+
+    <!-- 3. Lightbulb Toggle -->
+    <section>
+      <h2>3. Lightbulb Toggle</h2>
+      <img id="lightbulb" src="media/lightbulb_off.png" alt="Lightbulb" class="bulb-img">
+      <button onclick="toggleLight()">Toggle Light</button>
+      <div class="output" id="outputBulb"></div>
+    </section>
+
+    <!-- 4. Calculator -->
+    <section>
+      <h2>4. Basic Calculator</h2>
+      <label>Num 1: <input type="number" id="num2" value="0"></label>
+      <label>Num 2: <input type="number" id="num3" value="0"></label>
+      <select id="operation">
+        <option value="add">Add</option>
+        <option value="subtract">Subtract</option>
+        <option value="multiply">Multiply</option>
+        <option value="divide">Divide</option>
+      </select>
+      <button onclick="calculate()">Calculate</button>
+      <div class="output" id="output7"></div>
+    </section>
+
+    <!-- 5. Click Event Color Button -->
+    <section>
+      <h2>5. Click Event Color Changer</h2>
+      <button id="colorButton" style="background-color: red; color: #fff;">Click Me</button>
+      <div class="output">Button background cycles: red → blue → black</div>
+    </section>
+
+    <!-- 6. Color Mixer -->
+    <section>
+      <h2>6. Color Mixer (RGB Sliders)</h2>
+      <div>
+        <label class="slider-label">Red: <span id="redValue">128</span></label>
+        <input class="slider" type="range" id="red" min="0" max="255" value="128" oninput="updateColor()">
+      </div>
+      <div>
+        <label class="slider-label">Green: <span id="greenValue">128</span></label>
+        <input class="slider" type="range" id="green" min="0" max="255" value="128" oninput="updateColor()">
+      </div>
+      <div>
+        <label class="slider-label">Blue: <span id="blueValue">128</span></label>
+        <input class="slider" type="range" id="blue" min="0" max="255" value="128" oninput="updateColor()">
+      </div>
+      <div id="colorBox" class="color-box"></div>
+    </section>
+
+    <!-- 7. Grade Calculator -->
+    <section>
+      <h2>7. Grade Calculator</h2>
+      <label>Marks: <input type="number" id="marks" min="0" max="100" value="0"></label>
+      <button onclick="calculateGrade()">Get Grade</button>
+      <div class="output" id="result"></div>
+    </section>
+
+    <!-- 8. Operators Demo -->
+    <section>
+      <h2>8. Operators Demo</h2>
+      <label>A: <input type="number" id="inputA" value="0"></label>
+      <label>B: <input type="number" id="inputB" value="0"></label>
+      <button onclick="performOperations()">Show Results</button>
+      <div class="output" id="output1"></div>
+    </section>
+
+    <!-- 9. Variable Declaration Demo -->
+    <section>
+      <h2>9. Variable Declaration & Display</h2>
+      <label>Name: <input type="text" id="name" value="Alice"></label>
+      <label>Number: <input type="number" id="number" value="5"></label>
+      <button onclick="displayValues()">Display</button>
+      <div class="output" id="output"></div>
+    </section>
+
+    <!-- 10. Counter -->
+    <section>
+      <h2>10. Counter</h2>
+      <div class="counter-controls">
+        <button id="incrementBtn">Increment</button>
+        <button id="decrementBtn">Decrement</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <div class="output" id="counterDisplay">0</div>
+    </section>
+
+    <!-- 11. Functions: Square, Add, Even/Odd -->
+    <section>
+      <h2>11. Functions: Square, Add, Even/Odd</h2>
+      <label>Number: <input type="number" id="num1" value="2"></label>
+      <button onclick="calculateSquare()">Square</button>
+      <button onclick="addNumbers()">Add (Prompt)</button>
+      <button onclick="checkEvenOdd1()">Even/Odd</button>
+      <div class="output" id="output6"></div>
+    </section>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
